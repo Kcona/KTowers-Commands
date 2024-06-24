@@ -1,0 +1,1 @@
+scoreboard players set $global startTimer 1

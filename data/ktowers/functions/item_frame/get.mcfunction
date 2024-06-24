@@ -1,0 +1,1 @@
+give @s item_frame{EntityTag:{Tags:["frame_unfinished"]}} 8
