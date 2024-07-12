@@ -1,4 +1,4 @@
-# KTowers game manual
+# KTowers game manual [<img src="https://discord.com/api/guilds/1198811434436538399/widget.png?style=shield" alt="Discord Shield"/>](https://discord.gg/nvR8RwQnVE)
 ## 1. Join the server
 Make the production team and preferably the players too join the Minecraft server.
 
