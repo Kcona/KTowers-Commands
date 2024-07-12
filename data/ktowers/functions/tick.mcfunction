@@ -4,3 +4,5 @@ scoreboard players reset @a[team=production] deaths
 scoreboard players reset @a[team=production] kills
 scoreboard players reset @a[team=production] teamPoints
 scoreboard players reset @a[team=production] playerPoints
+
+scoreboard players set $global wait 0
