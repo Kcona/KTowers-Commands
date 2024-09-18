@@ -17,7 +17,7 @@ jobs:
       - name: Create "KTowers Commands" zip
         run: |
           mkdir -p release_assets
-          zip -r release_assets/server.zip data/ LICENSE README.md pack.mcmeta
+          zip -r release_assets/KTowers_Commands.zip data/ LICENSE README.md pack.mcmeta
           
       # Install GitHub CLI
       - name: Install GitHub CLI
