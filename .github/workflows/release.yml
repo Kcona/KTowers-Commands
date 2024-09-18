@@ -1,0 +1,33 @@
+name: Create Release Assets
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Create the "KTowers_Commands.zip" file
+      - name: Create "KTowers Commands" zip
+        run: |
+          mkdir -p release_assets
+          zip -r release_assets/server.zip data/ LICENSE README.md pack.mcmeta
+          
+      # Install GitHub CLI
+      - name: Install GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh
+          
+      # Upload the "KTowers Commands" asset using gh CLI
+      - name: Upload "KTowers Commands" asset
+        run: |
+          gh release upload "${{ github.event.release.tag_name }}" release_assets/KTowers_Commands.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
